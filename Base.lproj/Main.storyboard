@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DLT-dN-N8E">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="wCJ-OI-fby">
+            <objects>
+                <viewController id="DLT-dN-N8E" customClass="HomeVC" customModule="Kim_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F3f-gr-YXD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kim?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wo-oK-d4C">
+                                <rect key="frame" x="0.0" y="20" width="375" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="R0P-iW-T4e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="64"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-2Z-LBe">
+                                <rect key="frame" x="232" y="576" width="127" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="0rM-sV-dBp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Oyna">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="oyna:" destination="DLT-dN-N8E" eventType="touchUpInside" id="d5j-1M-ee1"/>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBY-4j-3Z8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storeLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vX-8q-sLC">
+                                <rect key="frame" x="0.0" y="151" width="375" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="EzD-s6-0x0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32668918629999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Wo-oK-d4C" firstAttribute="leading" secondItem="o7o-WY-X9J" secondAttribute="leading" id="0vZ-rN-7cF"/>
+                            <constraint firstItem="8Wo-oK-d4C" firstAttribute="centerX" secondItem="F3f-gr-YXD" secondAttribute="centerX" id="BUy-C2-LOT"/>
+                            <constraint firstItem="xbv-2Z-LBe" firstAttribute="trailing" secondItem="F3f-gr-YXD" secondAttribute="trailingMargin" id="KDv-rG-wK9"/>
+                            <constraint firstItem="6vX-8q-sLC" firstAttribute="top" secondItem="8Wo-oK-d4C" secondAttribute="bottom" constant="21" id="Man-4G-KHf"/>
+                            <constraint firstItem="8Wo-oK-d4C" firstAttribute="top" secondItem="o7o-WY-X9J" secondAttribute="top" constant="20" id="ZTd-2t-YWC"/>
+                            <constraint firstItem="8Wo-oK-d4C" firstAttribute="leading" secondItem="6vX-8q-sLC" secondAttribute="leading" id="hsi-eP-eDS"/>
+                            <constraint firstItem="xbv-2Z-LBe" firstAttribute="leading" secondItem="o7o-WY-X9J" secondAttribute="leading" constant="232" id="nYq-h1-SWZ"/>
+                            <constraint firstItem="8Wo-oK-d4C" firstAttribute="trailing" secondItem="6vX-8q-sLC" secondAttribute="trailing" id="oeG-T8-ThX"/>
+                            <constraint firstItem="o7o-WY-X9J" firstAttribute="bottom" secondItem="xbv-2Z-LBe" secondAttribute="bottom" constant="20" id="xvE-mv-sLT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o7o-WY-X9J"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="6vX-8q-sLC" id="DDk-lV-DJU"/>
+                        <outlet property="label" destination="8Wo-oK-d4C" id="Z9o-VB-Ni9"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ToVC" modalPresentationStyle="fullScreen" id="bbT-AA-3B8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gg3-sK-Tqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kim_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oyuncu 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nge-TM-y02">
+                                <rect key="frame" x="16" y="156" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="niw-XV-pMs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oyuncu 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVr-b6-R46">
+                                <rect key="frame" x="16" y="220" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="m6Y-k4-tZf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oyuncu 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-DK-T2T">
+                                <rect key="frame" x="16" y="284" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="SEq-q9-sBG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oyuncu 4" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pbi-NM-ng4">
+                                <rect key="frame" x="16" y="348" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="u2G-0S-fTW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oyuncu 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3oG-2J-zj3">
+                                <rect key="frame" x="16" y="412" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="tYe-O4-L8c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oyuncu 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-Xa-leE">
+                                <rect key="frame" x="16" y="476" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="L8G-Kc-AdO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOi-hE-UID">
+                                <rect key="frame" x="232" y="576" width="127" height="71"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Başla">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DIP-Yn-sbb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32558552449863021" green="0.009141813787614677" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l6o-DK-T2T" firstAttribute="trailing" secondItem="Pbi-NM-ng4" secondAttribute="trailing" id="1LI-OT-SJD"/>
+                            <constraint firstItem="EVr-b6-R46" firstAttribute="top" secondItem="nge-TM-y02" secondAttribute="bottom" constant="30" id="5J4-pg-lD3"/>
+                            <constraint firstItem="3oG-2J-zj3" firstAttribute="leading" secondItem="Kzn-Xa-leE" secondAttribute="leading" id="7UV-bk-cUu"/>
+                            <constraint firstItem="nge-TM-y02" firstAttribute="leading" secondItem="EVr-b6-R46" secondAttribute="leading" id="82I-Uc-NnW"/>
+                            <constraint firstItem="l6o-DK-T2T" firstAttribute="top" secondItem="EVr-b6-R46" secondAttribute="bottom" constant="30" id="9mz-XG-4Gw"/>
+                            <constraint firstItem="l6o-DK-T2T" firstAttribute="leading" secondItem="Pbi-NM-ng4" secondAttribute="leading" id="A1w-5M-Ufn"/>
+                            <constraint firstItem="3oG-2J-zj3" firstAttribute="top" secondItem="Pbi-NM-ng4" secondAttribute="bottom" constant="30" id="B9y-r0-udv"/>
+                            <constraint firstItem="EVr-b6-R46" firstAttribute="leading" secondItem="l6o-DK-T2T" secondAttribute="leading" id="C6a-8b-MxZ"/>
+                            <constraint firstItem="Kzn-Xa-leE" firstAttribute="top" secondItem="3oG-2J-zj3" secondAttribute="bottom" constant="30" id="DN3-xD-vb0"/>
+                            <constraint firstItem="3oG-2J-zj3" firstAttribute="trailing" secondItem="Kzn-Xa-leE" secondAttribute="trailing" id="EkG-QL-gLo"/>
+                            <constraint firstItem="nge-TM-y02" firstAttribute="trailing" secondItem="EVr-b6-R46" secondAttribute="trailing" id="Ggr-Ns-zJR"/>
+                            <constraint firstItem="nge-TM-y02" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="156" id="L2h-W1-mbt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BOi-hE-UID" secondAttribute="bottom" constant="20" id="PDT-wa-roc"/>
+                            <constraint firstItem="Pbi-NM-ng4" firstAttribute="trailing" secondItem="3oG-2J-zj3" secondAttribute="trailing" id="PVO-0e-qap"/>
+                            <constraint firstItem="Kzn-Xa-leE" firstAttribute="trailing" secondItem="BOi-hE-UID" secondAttribute="trailing" id="Zex-48-q75"/>
+                            <constraint firstItem="BOi-hE-UID" firstAttribute="top" secondItem="Kzn-Xa-leE" secondAttribute="bottom" constant="66" id="eNq-CO-qbZ"/>
+                            <constraint firstItem="Pbi-NM-ng4" firstAttribute="leading" secondItem="3oG-2J-zj3" secondAttribute="leading" id="iqP-Wh-AYl"/>
+                            <constraint firstItem="EVr-b6-R46" firstAttribute="trailing" secondItem="l6o-DK-T2T" secondAttribute="trailing" id="j9S-kJ-Bf7"/>
+                            <constraint firstItem="BOi-hE-UID" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="232" id="pF0-Wn-yn4"/>
+                            <constraint firstItem="nge-TM-y02" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sXI-vh-97t"/>
+                            <constraint firstItem="nge-TM-y02" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wOj-X6-WfD"/>
+                            <constraint firstItem="Pbi-NM-ng4" firstAttribute="top" secondItem="l6o-DK-T2T" secondAttribute="bottom" constant="30" id="xdd-eJ-4Ed"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="64o-cx-llG"/>
+                    <connections>
+                        <outlet property="p1" destination="nge-TM-y02" id="cyV-pY-0TN"/>
+                        <outlet property="p2" destination="EVr-b6-R46" id="Qos-dt-l1C"/>
+                        <outlet property="p3" destination="l6o-DK-T2T" id="oyh-MH-Xi3"/>
+                        <outlet property="p4" destination="Pbi-NM-ng4" id="Rjy-f3-BZE"/>
+                        <outlet property="p5" destination="3oG-2J-zj3" id="XOj-zY-8Se"/>
+                        <outlet property="p6" destination="Kzn-Xa-leE" id="vBJ-zz-fjS"/>
+                        <segue destination="MX2-nr-pv2" kind="presentation" identifier="ToPlayVC" modalPresentationStyle="fullScreen" id="ba8-4O-hSR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </scene>
+        <!--PlayVC-->
+        <scene sceneID="8II-rR-kiQ">
+            <objects>
+                <viewController id="MX2-nr-pv2" customClass="PlayVC" customModule="Kim_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UAg-7h-qgT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-Zs-ZUS">
+                                <rect key="frame" x="16" y="380" width="130" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Fyu-dl-Hf4"/>
+                                    <constraint firstAttribute="height" constant="60" id="gpg-gB-QJr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <state key="normal" title="Player 1">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p1act:" destination="MX2-nr-pv2" eventType="touchUpInside" id="IH6-5x-TS2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDH-e7-Xf7">
+                                <rect key="frame" x="229" y="380" width="130" height="60"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <state key="normal" title="Player 2">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p2act:" destination="MX2-nr-pv2" eventType="touchUpInside" id="cBF-yF-mxq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUD-BM-3RS">
+                                <rect key="frame" x="229" y="465" width="130" height="60"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <state key="normal" title="Player 4">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p4act:" destination="MX2-nr-pv2" eventType="touchUpInside" id="vLb-3M-J25"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TND-No-ThJ">
+                                <rect key="frame" x="16" y="550" width="130" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="fqr-aJ-UYB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <state key="normal" title="Player 5">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p5act:" destination="MX2-nr-pv2" eventType="touchUpInside" id="g4x-z8-q73"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-5O-uuy">
+                                <rect key="frame" x="16" y="465" width="130" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ei3-dj-Zez"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <state key="normal" title="Player 3">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p3act:" destination="MX2-nr-pv2" eventType="touchUpInside" id="0fo-wd-i92"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEB-LL-nQy">
+                                <rect key="frame" x="229" y="550" width="130" height="67"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <state key="normal" title="Player 6">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p6act:" destination="MX2-nr-pv2" eventType="touchUpInside" id="mQW-Mt-ljd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kpW-kE-3R0">
+                                <rect key="frame" x="16" y="76" width="343" height="238"/>
+                                <color key="backgroundColor" red="0.32537818457945206" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32668918629178084" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HPx-5O-uuy" firstAttribute="top" secondItem="wUD-BM-3RS" secondAttribute="top" id="0LO-mp-jP5"/>
+                            <constraint firstItem="y9c-Zs-ZUS" firstAttribute="trailing" secondItem="HPx-5O-uuy" secondAttribute="trailing" id="6bl-l6-SLl"/>
+                            <constraint firstItem="TND-No-ThJ" firstAttribute="baseline" secondItem="vEB-LL-nQy" secondAttribute="firstBaseline" id="E6v-Ng-gSZ"/>
+                            <constraint firstItem="BDH-e7-Xf7" firstAttribute="leading" secondItem="y9c-Zs-ZUS" secondAttribute="trailing" constant="83" id="EWo-hZ-KFV"/>
+                            <constraint firstItem="HPx-5O-uuy" firstAttribute="leading" secondItem="TND-No-ThJ" secondAttribute="leading" id="JPc-qy-5xy"/>
+                            <constraint firstItem="kpW-kE-3R0" firstAttribute="leading" secondItem="y9c-Zs-ZUS" secondAttribute="leading" id="PNA-9R-hca"/>
+                            <constraint firstItem="y9c-Zs-ZUS" firstAttribute="top" secondItem="kpW-kE-3R0" secondAttribute="bottom" constant="66" id="TtD-ck-dOJ"/>
+                            <constraint firstItem="oXY-Lm-tHx" firstAttribute="bottom" secondItem="TND-No-ThJ" secondAttribute="bottom" constant="50" id="WE9-4E-eXu"/>
+                            <constraint firstItem="BDH-e7-Xf7" firstAttribute="leading" secondItem="wUD-BM-3RS" secondAttribute="leading" id="X6l-dQ-4qL"/>
+                            <constraint firstItem="kpW-kE-3R0" firstAttribute="trailing" secondItem="UAg-7h-qgT" secondAttribute="trailingMargin" id="cMw-6S-LIC"/>
+                            <constraint firstItem="TND-No-ThJ" firstAttribute="top" secondItem="HPx-5O-uuy" secondAttribute="bottom" constant="25" id="dN6-L8-yPc"/>
+                            <constraint firstItem="kpW-kE-3R0" firstAttribute="trailing" secondItem="BDH-e7-Xf7" secondAttribute="trailing" id="fNc-GE-inB"/>
+                            <constraint firstItem="y9c-Zs-ZUS" firstAttribute="leading" secondItem="HPx-5O-uuy" secondAttribute="leading" id="gI2-Km-gL4"/>
+                            <constraint firstItem="kpW-kE-3R0" firstAttribute="top" secondItem="oXY-Lm-tHx" secondAttribute="top" constant="76" id="hxW-xT-AEh"/>
+                            <constraint firstItem="wUD-BM-3RS" firstAttribute="leading" secondItem="vEB-LL-nQy" secondAttribute="leading" id="oAD-Gk-Btn"/>
+                            <constraint firstItem="wUD-BM-3RS" firstAttribute="trailing" secondItem="vEB-LL-nQy" secondAttribute="trailing" id="pJd-DM-c55"/>
+                            <constraint firstItem="TND-No-ThJ" firstAttribute="top" secondItem="vEB-LL-nQy" secondAttribute="top" id="q7l-cD-Tnm"/>
+                            <constraint firstItem="y9c-Zs-ZUS" firstAttribute="top" secondItem="BDH-e7-Xf7" secondAttribute="top" id="qtW-5L-JOh"/>
+                            <constraint firstItem="y9c-Zs-ZUS" firstAttribute="baseline" secondItem="BDH-e7-Xf7" secondAttribute="firstBaseline" id="svf-6m-QaS"/>
+                            <constraint firstItem="kpW-kE-3R0" firstAttribute="leading" secondItem="UAg-7h-qgT" secondAttribute="leadingMargin" id="tVO-kZ-0ag"/>
+                            <constraint firstItem="BDH-e7-Xf7" firstAttribute="trailing" secondItem="wUD-BM-3RS" secondAttribute="trailing" id="v5D-Tm-KdB"/>
+                            <constraint firstItem="HPx-5O-uuy" firstAttribute="baseline" secondItem="wUD-BM-3RS" secondAttribute="firstBaseline" id="x7G-BY-v92"/>
+                            <constraint firstItem="HPx-5O-uuy" firstAttribute="top" secondItem="y9c-Zs-ZUS" secondAttribute="bottom" constant="25" id="yNe-bs-l3m"/>
+                            <constraint firstItem="HPx-5O-uuy" firstAttribute="trailing" secondItem="TND-No-ThJ" secondAttribute="trailing" id="yTr-nO-4hQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oXY-Lm-tHx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O5E-Gd-cMd"/>
+                    <connections>
+                        <outlet property="p1but" destination="y9c-Zs-ZUS" id="goT-pB-0Am"/>
+                        <outlet property="p2but" destination="BDH-e7-Xf7" id="v2i-TR-Jbz"/>
+                        <outlet property="p3but" destination="HPx-5O-uuy" id="7XZ-aL-XVb"/>
+                        <outlet property="p4but" destination="wUD-BM-3RS" id="VJ1-go-O8k"/>
+                        <outlet property="p5but" destination="TND-No-ThJ" id="rUy-be-gZW"/>
+                        <outlet property="p6but" destination="vEB-LL-nQy" id="lGB-Dp-UMe"/>
+                        <outlet property="question" destination="kpW-kE-3R0" id="uWd-KF-QBs"/>
+                        <segue destination="bkB-MP-ovf" kind="presentation" identifier="ToShotVC" modalPresentationStyle="fullScreen" id="gl8-PM-G2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWl-sA-tZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967.20000000000005" y="126.38680659670166"/>
+        </scene>
+        <!--Shot View Controller-->
+        <scene sceneID="kos-cd-YbK">
+            <objects>
+                <viewController id="bkB-MP-ovf" customClass="ShotViewController" customModule="Kim_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MHD-hc-A46">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mükemmel14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-gN-PAz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlQ-Nu-PMm">
+                                <rect key="frame" x="16" y="64" width="343" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2yR-Z4-BdA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7h-gI-dnY">
+                                <rect key="frame" x="240" y="587" width="119" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JJb-c4-Nce"/>
+                                    <constraint firstAttribute="width" constant="119" id="Mnf-At-8BX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <state key="normal" title="Devam et">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="devam:" destination="bkB-MP-ovf" eventType="touchUpInside" id="pf9-6d-3N8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="senin dışında herkes 1 shot atsın" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-so-njf">
+                                <rect key="frame" x="16" y="136" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="OG1-Ie-h22"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfQ-eY-v9Y">
+                                <rect key="frame" x="5" y="582" width="112" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="dHG-7m-qTx"/>
+                                    <constraint firstAttribute="width" constant="112" id="utn-rY-9eO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <state key="normal" title="Baştan Başla">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bastanBasla:" destination="bkB-MP-ovf" eventType="touchUpInside" id="baK-uK-dfq"/>
+                                    <action selector="devam:" destination="bkB-MP-ovf" eventType="touchUpInside" id="rPJ-HL-xAk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IHP-so-njf" firstAttribute="top" secondItem="NlQ-Nu-PMm" secondAttribute="bottom" constant="8" id="2WV-n5-zIw"/>
+                            <constraint firstItem="GfQ-eY-v9Y" firstAttribute="bottom" secondItem="L7h-gI-dnY" secondAttribute="bottom" id="9ON-sy-GaX"/>
+                            <constraint firstItem="NlQ-Nu-PMm" firstAttribute="trailing" secondItem="MHD-hc-A46" secondAttribute="trailingMargin" id="BJM-ew-9qt"/>
+                            <constraint firstItem="IHP-so-njf" firstAttribute="trailing" secondItem="L7h-gI-dnY" secondAttribute="trailing" id="DhN-UA-XjU"/>
+                            <constraint firstItem="GfQ-eY-v9Y" firstAttribute="leading" secondItem="REv-Ml-ldH" secondAttribute="leading" constant="5" id="FnU-5X-irc"/>
+                            <constraint firstItem="NlQ-Nu-PMm" firstAttribute="trailing" secondItem="IHP-so-njf" secondAttribute="trailing" id="Q1n-l5-rix"/>
+                            <constraint firstItem="Sn1-gN-PAz" firstAttribute="bottom" secondItem="REv-Ml-ldH" secondAttribute="bottom" id="Rtd-dd-NZQ"/>
+                            <constraint firstItem="Sn1-gN-PAz" firstAttribute="centerX" secondItem="NlQ-Nu-PMm" secondAttribute="centerX" id="Wz4-Ig-Lgz"/>
+                            <constraint firstItem="Sn1-gN-PAz" firstAttribute="leading" secondItem="REv-Ml-ldH" secondAttribute="leading" id="ZQj-eF-6ri"/>
+                            <constraint firstItem="REv-Ml-ldH" firstAttribute="bottom" secondItem="GfQ-eY-v9Y" secondAttribute="bottom" constant="20" id="glu-LM-Ecl"/>
+                            <constraint firstItem="NlQ-Nu-PMm" firstAttribute="leading" secondItem="MHD-hc-A46" secondAttribute="leadingMargin" id="qZu-1h-EYm"/>
+                            <constraint firstItem="Sn1-gN-PAz" firstAttribute="top" secondItem="REv-Ml-ldH" secondAttribute="top" id="sTp-ug-rti"/>
+                            <constraint firstItem="NlQ-Nu-PMm" firstAttribute="leading" secondItem="IHP-so-njf" secondAttribute="leading" id="tjH-Mc-Moq"/>
+                            <constraint firstItem="NlQ-Nu-PMm" firstAttribute="top" secondItem="REv-Ml-ldH" secondAttribute="top" constant="64" id="zLc-bu-UOg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="REv-Ml-ldH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gvN-Ib-xQS"/>
+                    <connections>
+                        <outlet property="shotAdet" destination="IHP-so-njf" id="W1U-Sb-KSU"/>
+                        <outlet property="shotLabel" destination="NlQ-Nu-PMm" id="4eb-vv-VeA"/>
+                        <segue destination="MX2-nr-pv2" kind="presentation" identifier="FromShotVC" modalPresentationStyle="fullScreen" id="5nT-ol-uZE"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="bastanbasla" modalPresentationStyle="fullScreen" id="vmb-pM-dTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIc-ro-IpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.2" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ba8-4O-hSR"/>
+        <segue reference="bbT-AA-3B8"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="mükemmel14.jpg" width="632" height="1015"/>
+        <image name="storeLogo.png" width="463" height="422"/>
+    </resources>
+</document>
