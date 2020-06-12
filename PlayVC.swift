@@ -141,7 +141,7 @@ class PlayVC: UIViewController {
         questions.append("Kim diğerlerinden daha çok balık tutardı?")
         questions.append("Kim bir bar sahibi olurdu?")
         questions.append("Kim güzellik salonu sahibi olurdu?")
-        questions.append("Kim böcek yerdi")
+        questions.append("Kim böcek yerdi?")
         questions.append("Kim ilgi çekmek için her şeyi yapardı?")
         questions.append("Kim her buluşmaya geç kalırdı?")
         questions.append("Kim milyon dolarlık bir uygulama geliştirirdi?")

@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var p4: UITextField!
     @IBOutlet weak var p3: UITextField!
     @IBOutlet weak var p2: UITextField!
-    var counter = 0
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,11 +18,11 @@ class ViewController: UIViewController {
      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
 
      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-     resetCounter()
+    
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
-         self.view.frame.origin.y = -140 // Move view 150 points upward
+         self.view.frame.origin.y = -120 // Move view 150 points upward
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {
@@ -32,10 +32,7 @@ class ViewController: UIViewController {
     {
         view.endEditing(true)
     }
-@objc func resetCounter()
-{
-    counter = 0
-    }
+
     func makeAlert(titleInput:String, messageInput:String) {
         
         
