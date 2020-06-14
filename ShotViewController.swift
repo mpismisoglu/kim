@@ -7,7 +7,7 @@ class ShotViewController: UIViewController {
   var interstitial: GADInterstitial!
    
     @IBOutlet weak var field: UITextView!
-    @IBOutlet weak var shotAdet: UILabel!
+    
     @IBOutlet weak var shotLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,18 +15,17 @@ class ShotViewController: UIViewController {
         let request = GADRequest()
            interstitial.load(request)
         
-        var shotArray = [String]()
+   
         var dareArray = [String]()
 
-        shotArray.append("1 shot at")
-        shotArray.append("2 shot at")
-        shotArray.append("3 shot at")
-        
+  
 
 
-        let number = Int.random(in: 0 ... 2)
+    
         let number2 = Int.random(in: 0 ... 57)
       
+        
+        
         
         
         dareArray.append("Telefonundaki en utanç verici fotoğrafı göster")
@@ -74,10 +73,10 @@ class ShotViewController: UIViewController {
         dareArray.append("Solundaki kişiye serenat yap")
         dareArray.append("Birini seç ve oyun bitmeden onu korkut")
         dareArray.append("Topuklu ayakkaıyla yürüyormuş gibi yürü")
-        dareArray.append("Dudaklarını oynatmadan alfabeti oku")
+        dareArray.append("Dudaklarını oynatmadan alfabeyi oku")
         dareArray.append("Başkan konuşması yap")
         dareArray.append("Çiğ yumurta ye")
-        dareArray.append("Arkadaşlarının seçtiği bir kelimeyi söylemen 15 dakika boyunca yasak olucak")
+        dareArray.append("Arkadaşlarının seçtiği bir kelimeyi söylemen 15 dakika boyunca yasak olacak")
         dareArray.append("Çiftleşen horoz taklidi yap")
         dareArray.append("Gruptan biriyle seks yapıyor olsan kimin olmasını istediğini söyle")
         dareArray.append("Kafandan aşağı buzlu su dök")
@@ -87,10 +86,23 @@ class ShotViewController: UIViewController {
         dareArray.append("Ağzında su varken şarkı söylemeye çalış")
         dareArray.append("Dinlediğin için utandığın bir şarkıcının kim olduğunu söyle")
         dareArray.append("Gözün kapalı sandviç yapmaya çalış")
-
-
-
-
+        dareArray.append("En son ne zaman birini ağlattığını söyle")
+        dareArray.append("Arkadaşlarının seçtiği bir şarkının nakaratını söyle")
+        dareArray.append("Arkadaşlarının senin üzerine bir şey çizmesine izin ver")
+        dareArray.append("Şu an bir dileğin gerçek olabilseydi ne dilerdin")
+        dareArray.append("Tuvalet logosu ile selfie çek ve Instagram'da paylaş")
+        dareArray.append("Yaptığın en aptalca şeyi anlat")
+        dareArray.append("Bir çin restorantını arayıp pizza siparişi ver")
+        dareArray.append("Moonwalk yap")
+        dareArray.append("Gökyüzünün nasıl göründüğünü 'mavi', 'beyaz' ve 'siyah' kelimelerini kullanmadan anlat")
+        dareArray.append("Sana bu soruyu soran kişiyi bir ürünmüş gibi pazarlamaya çalış")
+        dareArray.append("Bir arkadaşının sütyenini giy")
+        dareArray.append("Bir selfie çek ve rehberindeki hiç konuşmadığın birine yolla")
+        dareArray.append("Birine diss şarkısı yaz ve söyle")
+        
+          
+          
+         
 
 
         field.text = dareArray[number2]
@@ -99,7 +111,7 @@ class ShotViewController: UIViewController {
         
          
         
-        shotAdet.text = shotArray[number]
+       
         
         changeLabel()
         

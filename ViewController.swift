@@ -15,19 +15,22 @@ class ViewController: UIViewController {
        
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-
-     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     
     }
     
-    @objc func keyboardWillShow(sender: NSNotification) {
-         self.view.frame.origin.y = -120 // Move view 150 points upward
-    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+           self.view.frame.origin.y = -110
+       
+   }
 
-    @objc func keyboardWillHide(sender: NSNotification) {
-         self.view.frame.origin.y = 0 // Move view to original position
-    }
+   @objc func keyboardWillHide(notification: NSNotification) {
+       self.view.frame.origin.y = 0
+   }
+    
+    
     @objc func dismissKeyboard()
     {
         view.endEditing(true)
